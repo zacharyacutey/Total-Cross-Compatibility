@@ -13,4 +13,10 @@ def mul(a,b):
 #Python 0.9.1 does not allow int + float!
 def float_div(a,b):
   return float(a)/float(b)
-
+def get_raw():
+  try:
+    r=raw_input()
+  except NameError:
+    r=input()
+  return r
+#As for evaling code, give up!
