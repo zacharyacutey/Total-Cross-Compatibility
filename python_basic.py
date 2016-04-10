@@ -20,3 +20,10 @@ def get_raw():
     r=input()
   return r
 #As for evaling code, give up!
+#Oh god, python 0.9.1 does not have global
+def modify_global(name,val):
+  import __main__
+  __main__.__dict__[name] = val
+def delete_global(name):
+  import __main__
+  del __main__.__dict__[name]
